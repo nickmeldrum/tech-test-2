@@ -4,7 +4,7 @@ Seed project that sets up a jest/ eslint/ prettier environment so you don't have
 
 ## pre-requisites
 
-* `git` and `yarn`
+* `git`, `node` and `yarn` :)
 
 ## installation
 

@@ -1,4 +1,17 @@
-# nodejs tdd seed project
+# nodejs seed project
 
-Clone this repository to get a free starter project for your kata or even your nodejs project that automatically sets up jest, eslint and prettier.
+Seed project that sets up a jest/ eslint/ prettier environment so you don't have to :)
 
+## pre-requisites
+
+* `git` and `yarn`
+
+## installation
+
+* `yarn` to install the dependencies
+
+## running
+
+* `yarn test` to do a single run of eslint and jest
+* `yarn test:watch` to run the tests on a watcher
+* `yarn start` run the project in node

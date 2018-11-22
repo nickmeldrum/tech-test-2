@@ -3,7 +3,15 @@ module.exports = (A, K, L) => {
     return -1
   }
 
-  return 24
+  const kAnswers = []
+  const lAnswers = []
+
+  for (let i = 0; i < A.length; i += 1) {
+    kAnswers.push(A.slice(i, i + K).reduce((a, b) => a + b, 0))
+    lAnswers.push(A.slice(i, i + L).reduce((a, b) => a + b, 0))
+  }
+
+  return lAnswers
 }
 
 /*

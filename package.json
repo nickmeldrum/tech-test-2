@@ -5,8 +5,16 @@
   "license": "MIT",
   "scripts": {
     "start": "node ./lib/index.js",
-    "test": "eslint ./**/*.js && jest",
-    "test:watch": "jest --watch --notify"
+    "test": "eslint ./lib/**/*.js && jest --coverage --collectCoverageFrom=./lib/**/*.js",
+    "watch": "jest --watch --notify --coverage --collectCoverageFrom=./lib/**/*.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": ["eslint --fix", "git add"]
   },
   "devDependencies": {
     "eslint": "^5.9.0",
@@ -14,7 +22,9 @@
     "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-prettier": "^3.0.0",
+    "husky": "^1.1.4",
     "jest": "^23.6.0",
+    "lint-staged": "^8.0.5",
     "prettier": "^1.15.2"
   },
   "dependencies": {

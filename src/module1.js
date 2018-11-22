@@ -1,4 +1,4 @@
-module.exports = () => 'hello worlds'
+module.exports = input => input.match(/\d+/g).join('')
 
 // input is a string phone number
 // input contains digits, spaces and/or dashes

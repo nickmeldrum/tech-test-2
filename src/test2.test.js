@@ -1,9 +1,12 @@
 const task2 = require('src/task2')
 
 describe('task2', () => {
-  ;[{ input: '00-44  48 5555 8361', output: '004-448-555-583-61' }].forEach(testData => {
-    test(`test case with input: ${testData.input}`, () => {
-      expect(task2(testData.input)).toEqual(testData.output)
+  ;[
+    { A: [6, 1, 4, 6, 3, 2, 7, 4], K: 3, L: 2, output: 24 },
+    { A: [10, 19, 15], K: 2, L: 2, output: -1 },
+  ].forEach(testData => {
+    test(`test case with A: ${testData.A}`, () => {
+      expect(task2(testData.A, testData.K, testData.L)).toEqual(testData.output)
     })
   })
 })

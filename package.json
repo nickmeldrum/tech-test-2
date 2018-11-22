@@ -4,8 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "prestart": "ln -fs ../src node_modules",
     "start": "node ./index.js",
+    "pretest": "yarn prestart",
     "test": "eslint ./src/**/*.js && jest --coverage --collectCoverageFrom=src/**/*.js",
+    "prewatch": "yarn prestart",
     "watch": "jest --watch --notify --coverage --collectCoverageFrom=src/**/*.js"
   },
   "husky": {
@@ -26,7 +29,5 @@
     "jest": "^23.6.0",
     "lint-staged": "^8.0.5",
     "prettier": "^1.15.2"
-  },
-  "dependencies": {
   }
 }

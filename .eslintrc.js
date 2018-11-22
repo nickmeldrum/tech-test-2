@@ -5,4 +5,15 @@ module.exports = {
     es6: true,
     jest: true,
   },
+  rules: {
+    'import/no-extraneous-dependencies': 0,
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js'],
+        paths: ['.'],
+      },
+    },
+  },
 }

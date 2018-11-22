@@ -1,12 +1,12 @@
 {
   "name": "node-tdd-seed",
   "version": "0.0.1",
-  "main": "lib/index.js",
+  "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node ./lib/index.js",
-    "test": "eslint ./lib/**/*.js && jest --coverage --collectCoverageFrom=lib/**/*.js",
-    "watch": "jest --watch --notify --coverage --collectCoverageFrom=lib/**/*.js"
+    "start": "node ./index.js",
+    "test": "eslint ./src/**/*.js && jest --coverage --collectCoverageFrom=src/**/*.js",
+    "watch": "jest --watch --notify --coverage --collectCoverageFrom=src/**/*.js"
   },
   "husky": {
     "hooks": {

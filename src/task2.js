@@ -6,9 +6,16 @@ module.exports = (A, K, L) => {
   const kAnswers = []
   const lAnswers = []
 
+  const getSum = (arr, index, length) => arr.slice(index, index + length).reduce((a, b) => a + b, 0)
+  const addSumToAnswers = (answers, arr, index, length) =>
+    answers.push({
+      index,
+      sum: getSum(arr, index, length),
+    })
+
   for (let i = 0; i < A.length; i += 1) {
-    kAnswers.push(A.slice(i, i + K).reduce((a, b) => a + b, 0))
-    lAnswers.push(A.slice(i, i + L).reduce((a, b) => a + b, 0))
+    addSumToAnswers(kAnswers, A, i, K)
+    addSumToAnswers(lAnswers, A, i, L)
   }
 
   return lAnswers

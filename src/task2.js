@@ -14,11 +14,29 @@ module.exports = (A, K, L) => {
     })
 
   for (let i = 0; i < A.length; i += 1) {
-    addSumToAnswers(kAnswers, A, i, K)
-    addSumToAnswers(lAnswers, A, i, L)
+    if (A.length - i + 1 > K) addSumToAnswers(kAnswers, A, i, K)
+    if (A.length - i + 1 > L) addSumToAnswers(lAnswers, A, i, L)
   }
 
-  return lAnswers
+  let answer = 0
+  kAnswers.forEach(k => {
+    const startingIndex = k.index
+    const endingIndex = k.index + K
+    // before
+    // after
+    const lBeforeAnswers = lAnswers.filter(item => item.index + L < startingIndex + 1)
+    const lAfterAnswers = lAnswers.filter(item => item.index > endingIndex - 1)
+    lBeforeAnswers.forEach(lb => {
+      const sum = k.sum + lb.sum
+      if (sum > answer) answer = sum
+    })
+    lAfterAnswers.forEach(la => {
+      const sum = k.sum + la.sum
+      if (sum > answer) answer = sum
+    })
+  })
+
+  return answer
 }
 
 /*

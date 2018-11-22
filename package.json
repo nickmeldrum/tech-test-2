@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "start": "node ./lib/index.js",
-    "test": "eslint ./lib/**/*.js && jest --coverage --collectCoverageFrom=./lib/**/*.js",
-    "watch": "jest --watch --notify --coverage --collectCoverageFrom=./lib/**/*.js"
+    "test": "eslint ./lib/**/*.js && jest --coverage --collectCoverageFrom=lib/**/*.js",
+    "watch": "jest --watch --notify --coverage --collectCoverageFrom=lib/**/*.js"
   },
   "husky": {
     "hooks": {

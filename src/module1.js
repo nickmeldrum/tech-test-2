@@ -7,6 +7,13 @@ module.exports = input => {
     output += numbers[i]
     if (i + 1 < numbers.length && (i + 1) % 3 === 0) output += '-'
   }
+  if (numbers.length % 3 === 1) {
+    // last triple only has 1 number so move the dash to 1 earlier
+    const outputArray = output.split('')
+    outputArray.splice(outputArray.length - 2, 1)
+    outputArray.splice(outputArray.length - 2, 0, '-')
+    return outputArray.join('')
+  }
   return output
 }
 

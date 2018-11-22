@@ -13,5 +13,5 @@ Seed project that sets up a jest/ eslint/ prettier environment so you don't have
 ## running
 
 * `yarn test` to do a single run of eslint and jest
-* `yarn test:watch` to run the tests on a watcher
+* `yarn watch` to run the tests on a watcher
 * `yarn start` run the project in node

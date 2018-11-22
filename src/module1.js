@@ -29,3 +29,6 @@ module.exports = input => {
 // N (length of string) is an integer 2..100
 // correctness only not performance
 //
+//
+// Potential edge cases - negative numbers etc. - what are the edge cases of the regex?
+// what if it only has 2 numbers - what if 100?
